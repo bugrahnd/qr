@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aşkımızın Haritası 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Romantik parçacık animasyonu -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Karşılama Ekranı -->
+    <div class="password-screen">
+        <div class="welcome-container">
+            <h1 class="welcome-title">Aşkımızın Haritası</h1>
+            <p class="welcome-subtitle">Birlikte yaşadığımız anıları keşfetmek için şifreyi gir ✨</p>
+            
+            <div class="heart-container">
+                <div class="heart"></div>
+            </div>
+            
+            <div class="password-input">
+                <input type="password" id="pin1" maxlength="1" placeholder="❤">
+                <input type="password" id="pin2" maxlength="1" placeholder="💕">
+                <input type="password" id="pin3" maxlength="1" placeholder="💖">
+                <input type="password" id="pin4" maxlength="1" placeholder="💗">
+            </div>
+            
+            <button id="submitPassword">Kilidi Aç 🔓</button>
+            <div id="incorrectPassword" class="hidden">Yanlış Şifre! Tekrar dene 💔</div>
+        </div>
+    </div>
+
+    <!-- Harita Konteyneri -->
+    <div class="map-container hidden">
+        <!-- İstanbul Haritası -->
+        <div class="map istanbul active">
+            <div class="map-title">İstanbul - 🌟</div>
+            <img src="assets/istanbul.png" alt="İstanbul Haritası" class="map-img" />
+            
+            <!-- Pinler -->
+            <div class="pin" style="top: 58%; left: 48%;" data-id="istanbul1" title="Seni Fenerli Yaptığım Gün"></div>
+            <div class="pin" style="top: 51%; left: 43.5%;" data-id="istanbul2" title="Galata Kulesi Anılarımız"></div>
+            <div class="pin" style="top: 54%; left: 44%;" data-id="istanbul3" title="Topkapı Sarayı Ziyareti"></div>
+            <div class="pin" style="top: 41%; left: 47%;" data-id="istanbul4" title="En Sevdiğimiz Sushi Yeri"></div>
+            <div class="pin" style="top: 43%; left: 48%;" data-id="istanbul5" title="Bebek Sahili Yürüyüşü"></div>
+            <div class="pin" style="top: 51%; left: 45.2%;" data-id="istanbul6" title="Deniz Manzaralı Kahve"></div>
+            <div class="pin" style="top: 48%; left: 44.2%;" data-id="istanbul7" title="Beyoğlu Sokakları"></div>
+            <div class="pin" style="top: 46%; left: 46.3%;" data-id="istanbul8" title="Beşiktaş'ta Yemek"></div>
+            <div class="pin" style="top: 38%; left: 46%;" data-id="istanbul9" title="Doğum Günü Sürprizi"></div>
+            <div class="pin" style="top: 46%; left: 48.8%;" data-id="istanbu20" title="Beylerbeyi Sarayı"></div>
+            <div class="pin" style="top: 23.2%; left: 49%;" data-id="istanbu21" title="Aşk-ı Memnu Yalısı"></div>
+            <div class="pin" style="top: 75%; left: 65%;" data-id="istanbu22" title="Sabiha Gökçen"></div>
+            <div class="pin" style="top: 15%; left: 30%;" data-id="istanbu23" title="İstanbul Havalimanı"></div>
+        </div>
+
+        <!-- Trabzon Haritası -->
+        <div class="map trabzon">
+            <div class="map-title">Trabzon - Doğa ile Buluştuğumuz Yer 🌲</div>
+            <img src="assets/trabzon.png" alt="Trabzon Haritası" class="map-img" />
+            
+            <div class="pin" style="top: 55%; left: 60%;" data-id="trabzon1" title="Uzungöl Macerası"></div>
+            <div class="pin" style="top: 30%; left: 40%;" data-id="trabzon2" title="Sümela Manastırı"></div>
+        </div>
+
+        <!-- Navigasyon Butonları -->
+        <button id="leftBtn" aria-label="Önceki Şehir">❮</button>
+        <button id="rightBtn" aria-label="Sonraki Şehir">❯</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button id="closeModal" aria-label="Kapat">✕</button>
+            
+            <div class="camera-body">
+                <div id="mediaContainer"></div>
+                <div class="gallery-controls">
+                    <button id="prevBtn" aria-label="Önceki fotoğraf">❮</button>
+                    <span id="photoCounter"></span>
+                    <button id="nextBtn" aria-label="Sonraki fotoğraf">❯</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
